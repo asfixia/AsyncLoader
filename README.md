@@ -4,7 +4,7 @@ AsyncLoader is a simple and lightweight library of one file that loads CSS and J
 ## Documentation
 
 
-### AsyncLoader.loadScriptOnce(src: String | String[], callback);
+### AsyncLoader.loadScriptOnce(src: String | String[], callback: Function);
 `Loads all resources that were not load yet and then calls the callback function.`
 The resources are loaded only once even if multiple calls were made.
 If the url ends with '.css' the resource is a stylesheet otherwise it is treated as Javascript.

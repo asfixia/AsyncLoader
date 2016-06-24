@@ -2,18 +2,18 @@
 <head>
     <script src="asyncloader.js"></script>
     <script type="text/javascript">
-        function loadScriptsWithCallback() {
-            var inputs = document.getElementsByTagName('input');
-            var resources = [];
-            for (var i = inputs.length - 1; i >= 0; i--) {
-                var curValue = inputs[i].value;
-                if (curValue.length > 0)
-                    resources.push(curValue);
-            }
+function loadScriptsWithCallback() {
+    var inputs = document.getElementsByTagName('input');
+    var resources = [];
+    for (var i = inputs.length - 1; i >= 0; i--) {
+        var curValue = inputs[i].value;
+        if (curValue.length > 0)
+            resources.push(curValue);
+    }
 
 
-            AsyncLoader.loadScriptOnce(resources, eval('(function() {' + document.getElementById('txt').value + ' })'));
-        }
+    AsyncLoader.loadScriptOnce(resources, eval('(function() {' + document.getElementById('txt').value + ' })'));
+}
     </script>
 </head>
 <body>
@@ -28,6 +28,7 @@
 <textarea id="txt" style="width: 729px;height: 151px;">
 alert("loaded, Now you can drag around the square.");
 $( "#draggable" ).draggable();
+$( "#draggable" ).css('background-color', 'green');
 </textarea>
 
     <div style="width:200px;height:200px;" id="draggable" class="ui-widget-content">

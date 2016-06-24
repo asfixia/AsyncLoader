@@ -1,5 +1,5 @@
 # AsyncLoader
-AsyncLoader is a simple and lightweight library of one file that loads CSS and JS asynchronously.
+AsyncLoader is a simple and lightweight javascript library of one file that loads CSS and JS asynchronously.
 
 ## Documentation
 
@@ -17,14 +17,12 @@ If the url ends with '.css' the resource is a stylesheet otherwise it is treated
 ## Usage
 You can view a [working demo here](https://jsfiddle.net/danilomalzao/kztzv9Lc/).
 
-It can load 'Javascript' and 'CSS' resources for example:
-
-### One resource:
+### Load one resource:
 ```js
 AsyncLoader.loadScriptOnce('https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', function(){alert('loaded');});
 ```
 
-### Multiple resources:
+### Load multiple resources:
 ```js
 var resources = [
  'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js',

@@ -97,7 +97,7 @@ module AsyncLoader {
             //uncomment this line to see which ready states are called.
             if (!r && (!this.readyState || this.readyState == 'complete' || this.readyState == 'loaded')) {
                 r = true;
-                callback();
+                callback && callback();
             }
         }
         t = document.getElementsByTagName('script')[0];
@@ -123,7 +123,7 @@ module AsyncLoader {
                 }
             }
         } else
-            callback();
+            callback && callback();
     }
 
     /**
@@ -151,7 +151,8 @@ module AsyncLoader {
                     var entry = _relatedscripts.splice(i, 1);
                     var callbacks = entry[0][1];
                     while (callbacks.length) {
-                        callbacks.pop()();
+                        var curCallback = callbacks.pop();
+                        curCallback && curCallback();
                     }
                 }
             }

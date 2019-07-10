@@ -10,9 +10,9 @@ The resources are loaded only once even if multiple calls were made.
 If the url ends with '.css' the resource is a stylesheet otherwise it is treated as Javascript.
 
 
-`@param src` One url or multiple resource urls.
+`@param src {Array{String}|String}` One url or an array of resource urls.
 
-`@param callback` Function to be called after the scripts load.
+`@param callback {Function}` Function to be called after the scripts load.
 
 ## Usage
 You can view a [working demo here](https://jsfiddle.net/danilomalzao/kztzv9Lc/).

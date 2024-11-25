@@ -15,7 +15,7 @@ If the url ends with '.css' the resource is a stylesheet otherwise it is treated
 `@param callback {Function}` Function to be called after the scripts load.
 
 ## Usage
-You can view a [working demo here](https://jsfiddle.net/uqgr89bd/1/).
+You can view a [working demo here](https://jsfiddle.net/uqgr89bd/2/).
 
 ### Load one resource:
 ```js
